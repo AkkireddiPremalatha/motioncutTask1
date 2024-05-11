@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Page</title>
+    <link rel="stylesheet" href="mc.css">
+</head>
+<body>
+    <header>
+        <h1>Our Pricing</h1>
+    </header> 
+    <main>
+        <section class="pricing-option"  id="Basic" style="background-color:rgb(200,100,150)">
+         <div style="text-align:left">
+            <h2>Basic Plan</h2>
+            <p>$10/month</p>
+            <p>Basic features for up to 10 users</p>
+            <h3>Features</h3>
+            <ul>
+                <li>Access to basic features</li>
+                <li>Basic reporting and analytics</li>
+                <li>20GB individual data each user</li>
+                <li>Basic chat and email support</li>
+            </ul>
+         </div>
+         <button onclick="fun('Basic')">select</button>
+        </section>
+        <section class="pricing-option" id="Business" style="background-color:rgb(230,165,30)" >
+         <div style="text-align:left">
+            <h2>Business Plan</h2>
+            <p>$20/month</p>
+            <p>Growing teams up to 20 users</p>
+            <h3>Features</h3>
+            <ul>
+                <li>200+ integrations</li> 
+                <li>Advanced reporting and analytics</li>
+                <li>40GB individual data each user</li>
+                <li>Priority chat and email support</li>
+            </ul>
+         </div>
+         <button onclick="fun('Business')">select</button>
+        </section>
+        <section class="pricing-option" id="Enterprise" style="background-color:rgb(100,200,200)" >
+         <div style="text-align:left">
+            <h2>Enterprise Plan</h2>
+            <p>$40/month</p>
+            <p>Advanced features+unlimited users</p>
+            <h3>Features</h3>
+            <ul style="text-align:left">
+                <li>Advanced custom fields</li>
+                <li>Audit log and data history</li>
+                <li>Unlimited individual data</li>
+                <li>Personalised+priority service</li>
+            </ul>
+         </div>
+         <button onclick="fun('Enterprise')">select</button>
+        </section>
+        <script>
+            function fun(msg){
+            var pricingOptions = document.getElementsByClassName("pricing-option");
+            for (var i = 0; i < pricingOptions.length; i++) {
+                pricingOptions[i].style.display = "none";
+            }
+            var selectedOption = document.getElementById(msg);
+            selectedOption.style.display = "block";
+            let str="You want to go with the "+msg+" plan";
+            alert(str);
+            }
+        </script>
+    </main>
+    <footer>
+        <p>designed by latha.com</p>
+    </footer>
+</body>
+</html>
